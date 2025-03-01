@@ -19,7 +19,7 @@ const Dashboard = () => {
       setMaxPrice("");
       setMinRating("");
       try {
-         const response = await axios.get("http://localhost:8000/api/products");
+         const response = await axios.get("https://product-crud-ee6c.onrender.com/api/products");
          setProducts(response.data.data || []);
          setFilteredProducts(response.data.data || []);
       } catch (error) {
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
    const fetchFeaturedProducts = async () => {
       try {
-         const response = await axios.get("http://localhost:8000/api/products/featured");
+         const response = await axios.get("https://product-crud-ee6c.onrender.com/api/products/featured");
          setFeaturedProducts(response.data || []);
       } catch (error) {
          console.error("Error fetching featured products:", error);
@@ -42,12 +42,12 @@ const Dashboard = () => {
          let ratingFiltered = [];
 
          if (maxPrice) {
-            const priceResponse = await axios.get(`http://localhost:8000/api/products/price?maxPrice=${maxPrice}`);
+            const priceResponse = await axios.get(`https://product-crud-ee6c.onrender.com/api/products/price?maxPrice=${maxPrice}`);
             priceFiltered = priceResponse.data || [];
          }
 
          if (minRating) {
-            const ratingResponse = await axios.get(`http://localhost:8000/api/products/rating?minRating=${minRating}`);
+            const ratingResponse = await axios.get(`https://product-crud-ee6c.onrender.com/api/products/rating?minRating=${minRating}`);
             ratingFiltered = ratingResponse.data || [];
          }
 

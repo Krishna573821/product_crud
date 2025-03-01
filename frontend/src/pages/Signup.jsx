@@ -25,7 +25,7 @@ const Signup = () => {
       e.preventDefault();
       try {
          const response = await axios.post(
-            "http://localhost:8000/api/users/register",
+            "https://product-crud-ee6c.onrender.com/api/users/register",
             newUser
          );
          console.log("User Registered:", response.data);

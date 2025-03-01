@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
    const fetchProducts = async () => {
       try {
-         const response = await axios.get("http://localhost:8000/api/products", {
+         const response = await axios.get("https://product-crud-ee6c.onrender.com/api/products", {
             headers: {
                Authorization: `Bearer ${token}`,
             },
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
      e.preventDefault();
      console.log("Updating Product:", editProduct)
       try {
-         await axios.patch(`http://localhost:8000/api/products/${editProduct._id}`, editProduct, {
+         await axios.patch(`https://product-crud-ee6c.onrender.com/api/products/${editProduct._id}`, editProduct, {
             headers: {
                Authorization: `Bearer ${token}`,
             },
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
    const handleDelete = async (id) => {
       if (window.confirm("Are you sure you want to delete this product?")) {
          try {
-            await axios.delete(`http://localhost:8000/api/products/${id}`, {
+            await axios.delete(`https://product-crud-ee6c.onrender.com/api/products/${id}`, {
                headers: {
                   Authorization: `Bearer ${token}`,
                },

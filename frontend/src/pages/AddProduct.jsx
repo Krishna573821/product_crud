@@ -41,7 +41,7 @@ const AddProduct = () => {
       }
 
       try {
-         await axios.post("http://localhost:8000/api/products", formData, {
+         await axios.post("https://product-crud-ee6c.onrender.com/api/products", formData, {
             headers: { Authorization: `Bearer ${token}` },
          });
 
