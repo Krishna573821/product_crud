@@ -6,7 +6,7 @@ import Login from './pages/Login.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import AddProduct from './pages/AddProduct.jsx';
-import Navbar from './components/navbar.jsx';
+import Navbar from './components/Navbar.jsx';
 
 const App = () => {
   const navigate = useNavigate();
